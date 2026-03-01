@@ -251,6 +251,12 @@
             color: #ffffff !important;
         }
         
+        /* CORREÇÃO: hover dos ícones de contato no modo escuro */
+        body:not(.light-mode) .group:hover .border-2.border-current {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+        
         * {
             -webkit-tap-highlight-color: transparent;
         }
@@ -943,8 +949,9 @@
         }
         
         .modal-close {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
             display: flex;
@@ -954,6 +961,7 @@
             transition: var(--transition-smooth);
             border: none;
             color: white;
+            margin-left: 1rem;
         }
         
         body.light-mode .modal-close {
@@ -2199,11 +2207,7 @@
                         <span class="cert-detail-value">IFS</span>
                     </div>
                     
-                   
-                    <div class="cert-detail-item">
-                        <span class="cert-detail-label">Conclusão</span>
-                        <span class="cert-detail-value">2024</span>
-                    </div>
+                    <!-- Linha "Conclusão" removida conforme solicitado -->
                     
                     <div class="cert-footer">
                         <span class="cert-type">Certificação Técnica</span>
@@ -2237,12 +2241,9 @@
                         <span class="cert-detail-value">Descomplica</span>
                     </div>
                     
-                  
-                    
-           
-                    
                     <div class="cert-footer">
-                        <span class="cert-type">Graduação Tecnológica</span>
+                        <!-- Alterado de "Graduação Tecnológica" para "Expertise Prática" -->
+                        <span class="cert-type">Expertise Prática</span>
                         <button class="cert-view">
                             Visualizar
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2253,7 +2254,7 @@
                     </div>
                 </div>
                 
-                <!-- Certificados Digitais -->
+                <!-- Programmer -->
                 <div class="cert-card reveal group cursor-pointer" onclick="openCertModal('cert-digital')" data-cursor="hover">
                     <div class="flex items-start justify-between mb-4">
                         <div class="cert-icon">
@@ -2261,7 +2262,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
                         </div>
-                        <span class="cert-status">Experiência</span>
+                        <!-- Alterado de "Experiência" para "Cursando" -->
+                        <span class="cert-status">Cursando</span>
                     </div>
                     
                     <h3 class="cert-title">Programmer</h3>
@@ -2271,9 +2273,6 @@
                         <span class="cert-detail-label">Instituição</span>
                         <span class="cert-detail-value">Descomplica</span>
                     </div>
-                    
-                   
-                  
                     
                     <div class="cert-footer">
                         <span class="cert-type">Expertise Prática</span>
@@ -2683,13 +2682,10 @@
                                 <p class="text-sm text-gray-400 mb-1">Instituição</p>
                                 <p class="font-semibold">Instituto Federal de Sergipe</p>
                             </div>
-                            <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Carga Horária</p>
-                                <p class="font-semibold">1200 horas</p>
-                            </div>
+                         
                             <div class="p-4 bg-white/5 rounded-xl">
                                 <p class="text-sm text-gray-400 mb-1">Conclusão</p>
-                                <p class="font-semibold">2023</p>
+                                <p class="font-semibold">2024</p>
                             </div>
                             <div class="p-4 bg-white/5 rounded-xl">
                                 <p class="text-sm text-gray-400 mb-1">Status</p>
@@ -2724,12 +2720,9 @@
                             </div>
                             <div class="p-4 bg-white/5 rounded-xl">
                                 <p class="text-sm text-gray-400 mb-1">Previsão</p>
-                                <p class="font-semibold">2026</p>
+                                <p class="font-semibold">2027</p>
                             </div>
-                            <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Semestre</p>
-                                <p class="font-semibold">3º</p>
-                            </div>
+                          
                             <div class="p-4 bg-white/5 rounded-xl">
                                 <p class="text-sm text-gray-400 mb-1">Status</p>
                                 <p class="text-yellow-400 font-semibold">Cursando</p>
@@ -2742,7 +2735,6 @@
                                 <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Programação Orientada a Objetos</span>
                                 <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Banco de Dados</span>
                                 <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Desenvolvimento Web</span>
-                                <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Engenharia de Software</span>
                             </div>
                         </div>
                     </div>
@@ -2758,20 +2750,17 @@
                         
                         <div class="grid grid-cols-2 gap-4">
                             <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Empresa</p>
-                                <p class="font-semibold">Getinfo / TRT-20</p>
+                                <p class="text-sm text-gray-400 mb-1">Instituição</p>
+                                <p class="font-semibold">Faculdade Descomplica</p>
+                            </div>
+                            
+                            <div class="p-4 bg-white/5 rounded-xl">
+                                <p class="text-sm text-gray-400 mb-1">Previsão</p>
+                                <p class="font-semibold">2027</p>
                             </div>
                             <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Especialidade</p>
-                                <p class="font-semibold">A1 e A3</p>
-                            </div>
-                            <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Período</p>
-                                <p class="font-semibold">2025 - Atual</p>
-                            </div>
-                            <div class="p-4 bg-white/5 rounded-xl">
-                                <p class="text-sm text-gray-400 mb-1">Tipo</p>
-                                <p class="text-yellow-400 font-semibold">Experiência Profissional</p>
+                                <p class="text-sm text-gray-400 mb-1">Status</p>
+                                <p class="text-yellow-400 font-semibold">Cursando</p>
                             </div>
                         </div>
                         
